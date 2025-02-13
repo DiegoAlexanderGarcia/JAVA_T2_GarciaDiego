@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CampusLands {
-    // Clase principal para ejecutar el programa
+    
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             int opcion;
@@ -19,7 +19,7 @@ public class CampusLands {
                 System.out.println("5. Salir");
                 System.out.print("Seleccione una opción: ");
                 opcion = scanner.nextInt();
-                scanner.nextLine(); // Limpiar buffer
+                scanner.nextLine(); 
                 
                 switch (opcion) {
                     case 1 -> menuCampers(scanner);
@@ -62,7 +62,7 @@ public class CampusLands {
         } while (opcion != 4);
     }
 
-    // Método para registrar un nuevo camper
+    // registrar un nuevo camper
     private static void registrarCamper(Scanner scanner, ArrayList<Camper> campers) {
         System.out.print("Ingrese ID: ");
         int id = scanner.nextInt();
@@ -82,7 +82,7 @@ public class CampusLands {
         System.out.println("Camper registrado exitosamente.");
     }
 
-    // Método para listar campers
+    // listar campers
     private static void listarCampers(ArrayList<Camper> campers) {
         if (campers.isEmpty()) {
             System.out.println("No hay campers registrados.");
@@ -94,7 +94,7 @@ public class CampusLands {
         }
     }
 
-    // Método para cambiar el estado de un camper
+    // cambiar el estado de un camper
     private static void cambiarEstadoCamper(Scanner scanner, ArrayList<Camper> campers) {
         System.out.print("Ingrese el ID del camper a modificar: ");
         int id = scanner.nextInt();
@@ -116,7 +116,7 @@ public class CampusLands {
     private static void menuTrainers(Scanner scanner) {
         ArrayList<Trainer> trainers = new ArrayList<>();
 
-        // Datos falsos iniciales
+        // Datos 
         trainers.add(new Trainer(1, "Pedro Gomez", "Java"));
         trainers.add(new Trainer(2, "Laura Martinez", "NodeJS"));
 
@@ -140,7 +140,7 @@ public class CampusLands {
         } while (opcion != 3);
     }
 
-    // Método para registrar un nuevo trainer
+    // registrar un nuevo trainer
     private static void registrarTrainer(Scanner scanner, ArrayList<Trainer> trainers) {
         System.out.print("Ingrese ID: ");
         int id = scanner.nextInt();
@@ -154,7 +154,7 @@ public class CampusLands {
         System.out.println("Trainer registrado exitosamente.");
     }
 
-    // Método para listar trainers
+    // listar trainers
     private static void listarTrainers(ArrayList<Trainer> trainers) {
         if (trainers.isEmpty()) {
             System.out.println("No hay trainers registrados.");
@@ -166,11 +166,11 @@ public class CampusLands {
         }
     }
 
-    // Menú para gestión de rutas
+    // gestión de rutas
     private static void menuRutas(Scanner scanner) {
         ArrayList<Ruta> rutas = new ArrayList<>();
 
-        // Datos falsos iniciales
+        // Datos 
         rutas.add(new Ruta(1, "Ruta Java", 33));
         rutas.add(new Ruta(2, "Ruta NodeJS", 33));
 
@@ -194,7 +194,7 @@ public class CampusLands {
         } while (opcion != 3);
     }
 
-    // Método para crear una nueva ruta
+    // crear una nueva ruta
     private static void crearRuta(Scanner scanner, ArrayList<Ruta> rutas) {
         System.out.print("Ingrese ID: ");
         int id = scanner.nextInt();
@@ -208,7 +208,7 @@ public class CampusLands {
         System.out.println("Ruta creada exitosamente.");
     }
 
-    // Método para listar rutas
+    // listar rutas
     private static void listarRutas(ArrayList<Ruta> rutas) {
         if (rutas.isEmpty()) {
             System.out.println("No hay rutas registradas.");
@@ -220,7 +220,7 @@ public class CampusLands {
         }
     }
 
-    // Método para generar reportes
+    // generar reportes
     private static void generarReportes() {
         System.out.println("\n=== GENERAR REPORTES ===");
         System.out.println("Funcionalidad de reportes aún no implementada.");
