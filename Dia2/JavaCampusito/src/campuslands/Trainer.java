@@ -2,9 +2,9 @@ package campuslands;
 
 // Clase Trainer
 class Trainer {
-    private int id;
-    private String nombre;
-    private String especialidad;
+    private final int id;
+    private final String nombre;
+    private final String especialidad;
 
     public Trainer(int id, String nombre, String especialidad) {
         this.id = id;
