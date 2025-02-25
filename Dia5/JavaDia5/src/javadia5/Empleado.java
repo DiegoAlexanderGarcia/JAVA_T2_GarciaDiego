@@ -12,11 +12,19 @@ public class Empleado {
     }
     
     public void setSalario(double salario){
-        if (salario > 0)
+        if (salario > 0){
+            this.salario = salario;
+        }else{
+            System.out.println("El salario no puede ser negativo");
+        }
     }
     
     public String getNombre(){
-        return "Nombre empleado:"+nombre;
+        return nombre;
+    }
+    
+    public void setNombre(String nombre){
+        this.nombre = nombre;
     }
     
     public int getId(){
@@ -29,9 +37,9 @@ public class Empleado {
     
     public void mostrarInformacion (){
         if (salario > 0){
-            System.out.println("Nombre Empleado:" + nombre + "ID empleado: " + id + "Salario mensual: " + salario);
+            System.out.println("Nombre Empleado:"+" " + nombre + "\nID empleado: " + id + "\nSalario mensual: " + salario);
         }else{
-            System.err.println("Nombre Empleado:" + nombre + "ID empleado: " + id +"Usted no cuenta con saldo en sucuenta!!");
+            System.err.println("Nombre Empleado:"+" "+ nombre + "\nID empleado: " + id +"\nUsted no cuenta con saldo en sucuenta!!");
         }              
     }
 }
