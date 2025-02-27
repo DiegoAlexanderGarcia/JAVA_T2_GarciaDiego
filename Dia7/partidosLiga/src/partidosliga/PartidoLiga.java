@@ -5,9 +5,14 @@ import java.time.LocalDate;
 public class PartidoLiga extends Partido{
     private int numeroJornada;
 
-    public PartidoLiga(int nomeroJornada, String EquipoLocal, String EquipoVisitante, int CestasLocal, int CestasVisitante, boolean EstadoPartido, LocalDate FechaPartido) {
-        super(EquipoLocal, EquipoVisitante, CestasLocal, CestasVisitante, EstadoPartido, FechaPartido);
+    public PartidoLiga(String EquipoLocal, String EquipoVisitante, LocalDate FechaPartido, int numeroJornada) {
+        super(EquipoLocal, EquipoVisitante, FechaPartido);
         this.numeroJornada = numeroJornada;
+    }
+    
+    @Override
+    public void finalizarPartido() {
+        this.EstadoPartido = true;
     }
     
     @Override

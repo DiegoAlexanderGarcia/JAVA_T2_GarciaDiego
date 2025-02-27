@@ -10,7 +10,7 @@ public class Partido {
     protected boolean EstadoPartido;
     protected LocalDate FechaPartido;
 
-    public Partido(String EquipoLocal, String EquipoVisitante, int CestasLocal, int CestasVisitante, boolean EstadoPartido, LocalDate FechaPartido) {
+    public Partido(String EquipoLocal, String EquipoVisitante, LocalDate FechaPartido) {
         this.EquipoLocal = EquipoLocal;
         this.EquipoVisitante = EquipoVisitante;
         this.CestasLocal = 0;
@@ -19,17 +19,19 @@ public class Partido {
         this.FechaPartido = FechaPartido;
     }
     
-    public void RegistrarCestas(String equipo, int puntos){
-        if (!EstadoPartido){
-            if (equipo.equalsIgnoreCase(EquipoLocal)){
-                CestasLocal += puntos;
-            }else if (equipo.equalsIgnoreCase(EquipoVisitante)){
-                CestasVisitante += puntos;
-            }
+    public void registrarPuntosLocal(int puntos) {
+        if (!EstadoPartido) {
+            this.CestasLocal += puntos;
+        }
+    }
+
+    public void registrarPuntosVisitante(int puntos) {
+        if (!EstadoPartido) {
+            this.CestasVisitante += puntos;
         }
     }
     
-    public String obtenerResultado(){
+    public String obtenerResultado() {
         return EquipoLocal + ": " + CestasLocal + " - " + EquipoVisitante + ": " + CestasVisitante;
     }
     
